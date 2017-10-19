@@ -20,3 +20,11 @@ Check django version:
 Start server:
 
     $ python manage.py runserver
+
+Test API using HTTPie:
+
+    $ bash  http -a admin:password123 http://127.0.0.1:8000/users/
+
+Or open in web browser:
+
+    - http://127.0.0.1:8000/users/
