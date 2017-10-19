@@ -3,18 +3,16 @@ python django helloworld
 
 A Django 'hello world' example.
 
-Install Django if not present:
+Install virtualenv, activate it and install requirements libs
 
-    $ sudo pip install django
+	$ virtualenv env
+	$ source env/bin/activate
+	$ pip install -r requirements.txt
 
 Check django version:
 
     $ python -c "import django; print(django.get_version())"
-    or $ django-admin.py version
-
-For run this example need to install Django framework execute the follow command::
-
-    $ sudo pip install -r requirements.txt
+    $ django-admin.py version
 
 And later followed by:
 
@@ -48,3 +46,7 @@ After which you can run:
 And open the following URL in your web browser:
 
  - http://127.0.0.1:8000/
+
+To exit from virtualenv
+
+	$ deactivate

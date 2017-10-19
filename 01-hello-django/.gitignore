@@ -10,3 +10,4 @@ dist/
 helloworld.db
 local_settings.py
 .idea
+env
