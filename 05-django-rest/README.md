@@ -16,3 +16,7 @@ Check django version:
 
     $ python -c "import django; print(django.get_version())"
     $ python -c "import rest_framework; print rest_framework.VERSION"
+
+Start server:
+
+    $ python manage.py runserver
