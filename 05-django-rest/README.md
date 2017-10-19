@@ -28,3 +28,7 @@ Test API using HTTPie:
 Or open in web browser:
 
     - http://127.0.0.1:8000/users/
+
+Open db.sqlite3 auth_user table:
+
+    - http://sqlitebrowser.org/
