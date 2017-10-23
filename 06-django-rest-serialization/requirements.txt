@@ -1,0 +1,3 @@
+django
+djangorestframework
+pygments  # We'll be using this for the code highlighting
