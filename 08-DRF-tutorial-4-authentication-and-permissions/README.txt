@@ -11,6 +11,7 @@
 
     $ /usr/local/bin/mysql.server start
     $ truncate/delete database or tables
+    $ delete migrations
     $ python3 -m venv env_dev
     $ source env_dev/bin/activate
     $ pip install -r requirements/dev.txt
