@@ -10,7 +10,7 @@
 ## Setup
 
     $ /usr/local/bin/mysql.server start
-    $ python3 -m venv env_dev ## Important to set python3 to env
+    $ python3 -m venv env_dev ## Important to set python3 env
     $ source env_dev/bin/activate
     $ pip install -r requirements.txt
 
@@ -25,7 +25,7 @@
     $ http http://127.0.0.1:8000/snippets/
     # http http://127.0.0.1:8000/snippets.json
     $ http http://127.0.0.1:8000/snippets.api
-    
+
     $ http --debug --form POST http://127.0.0.1:8000/snippets/ code="print 444444"
     $ http --debug --json POST http://127.0.0.1:8000/snippets/ code="print 456"
     $ http --debug --json POST http://127.0.0.1:8000/snippets/ code="print 777"
