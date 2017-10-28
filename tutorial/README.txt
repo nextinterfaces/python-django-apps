@@ -9,3 +9,5 @@
     $ python manage.py migrate
 
     $ python manage.py createsuperuser
+
+    $ http http://127.0.0.1:8000/snippets/
