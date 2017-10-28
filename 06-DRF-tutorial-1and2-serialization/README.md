@@ -23,3 +23,9 @@
     $ python manage.py runserver 0.0.0.0:8000
 
     $ http http://127.0.0.1:8000/snippets/
+    # http http://127.0.0.1:8000/snippets.json
+    $ http http://127.0.0.1:8000/snippets.api
+    
+    $ http --debug --form POST http://127.0.0.1:8000/snippets/ code="print 444444"
+    $ http --debug --json POST http://127.0.0.1:8000/snippets/ code="print 456"
+    $ http --debug --json POST http://127.0.0.1:8000/snippets/ code="print 777"
