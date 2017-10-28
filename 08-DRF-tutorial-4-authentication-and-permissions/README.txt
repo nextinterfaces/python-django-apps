@@ -5,11 +5,12 @@
 
 ## Django RESTFramework tutorials
 
-    - http://www.django-rest-framework.org/tutorial/3-class-based-views/
+    - http://www.django-rest-framework.org/tutorial/4-authentication-and-permissions/
 
 ## Django tutorials
 
     $ /usr/local/bin/mysql.server start
+    $ truncate/delete database or tables
     $ python3 -m venv env_dev
     $ source env_dev/bin/activate
     $ pip install -r requirements/dev.txt
