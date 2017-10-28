@@ -1,30 +1,38 @@
-Django REST framework Serialization
-=========
 
-A REST application written in Python, Django and REST-framework based on [This tutorial](http://www.django-rest-framework.org/tutorial/1-serialization/).
+## MySQL setup
 
-Installation
-------------
+    - http://www.marinamele.com/taskbuster-django-tutorial/install-and-configure-mysql-for-django
 
-    $ virtualenv env
+## Django RESTFramework tutorials
 
-    $ source env/bin/activate
+    - http://www.django-rest-framework.org/tutorial/3-class-based-views/
 
+## Django tutorials
+
+    $ /usr/local/bin/mysql.server start
+    $ python3 -m venv env_dev ## Important to set python3 to env
+    $ source env_dev/bin/activate
     $ pip install -r requirements.txt
 
-Check django version:
+    $ django-admin.py startproject tutorial
+    # python manage.py startapp snippets
 
-    $ python -c "import django; print(django.get_version())"
-    $ python -c "import rest_framework; print rest_framework.VERSION"
+    $ python manage.py makemigrations snippets
+    $ python manage.py migrate
 
-Start server:
 
-    $ python manage.py runserver
+    $ python manage.py shell
 
-Test API using HTTPie:
+    $ python manage.py runserver 0.0.0.0:8000
 
-    $ bash  http -a admin:password123 http://127.0.0.1:8000/users/
 
-Or open in web browser:
 
-    - http://127.0.0.1:8000/users/
+    $ python3 manage.py createsuperuser
+    --> admin:canadacanada
+
+
+    $ http http://127.0.0.1:8000/snippets/
+    $ http http://127.0.0.1:8000/snippets/ Accept:application/json  # Request JSON
+    $ http http://127.0.0.1:8000/snippets/ Accept:text/html         # Request HTML
+    $ http http://127.0.0.1:8000/snippets.json  # JSON suffix
+    $ http http://127.0.0.1:8000/snippets.api   # Browsable API suffix

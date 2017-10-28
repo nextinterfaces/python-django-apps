@@ -1,3 +1,5 @@
-django
-djangorestframework
-pygments  # We'll be using this for the code highlighting
+Django==1.11.6
+djangorestframework==3.7.1
+mysqlclient==1.3.12
+Pygments==2.2.0
+pytz==2017.2
