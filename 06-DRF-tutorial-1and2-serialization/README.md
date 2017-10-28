@@ -10,7 +10,7 @@
 ## Setup
 
     $ /usr/local/bin/mysql.server start
-    $ python3 -m venv env_dev ## Important to set python3 env
+    $ python3 -m venv env_dev           # ! Important to set python3 env
     $ source env_dev/bin/activate
     $ pip install -r requirements.txt
 

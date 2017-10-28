@@ -10,16 +10,16 @@
 ## Django tutorials
 
     $ /usr/local/bin/mysql.server start
-    $ python3 -m venv env_dev
+    $ python3 -m venv env_dev           # ! Important to set python3 env
     $ source env_dev/bin/activate
     $ pip install -r requirements/dev.txt
 
-    $ python3 manage.py makemigrations snippets
-    $ python3 manage.py migrate
-    $ python3 manage.py createsuperuser
+    $ python manage.py makemigrations snippets
+    $ python manage.py migrate
+    $ python manage.py createsuperuser
     --> admin:canadacanada
 
-    $ python3 manage.py runserver 0.0.0.0:8000
+    $ python manage.py runserver 0.0.0.0:8000
 
     $ http http://127.0.0.1:8000/snippets/
     $ http http://127.0.0.1:8000/snippets/ Accept:application/json  # Request JSON
