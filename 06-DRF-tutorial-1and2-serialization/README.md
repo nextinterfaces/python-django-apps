@@ -1,11 +1,11 @@
 
 ## MySQL setup
 
-    - http://www.marinamele.com/taskbuster-django-tutorial/install-and-configure-mysql-for-django
+- http://www.marinamele.com/taskbuster-django-tutorial/install-and-configure-mysql-for-django
 
 ## Django RESTFramework tutorials
 
-    - http://www.django-rest-framework.org/tutorial/3-class-based-views/
+- http://www.django-rest-framework.org/tutorial/3-class-based-views/
 
 ## Django tutorials
 
