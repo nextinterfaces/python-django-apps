@@ -31,4 +31,11 @@ Extend settings.py
     - http://igorsobreira.com/2010/09/12/customize-settingspy-locally-in-django.html
     - http://www.robgolding.com/blog/2010/05/03/extending-settings-variables-with-local_settings-py-in-django/
 
+Django Logging
+-------
+
+    - https://docs.djangoproject.com/en/1.11/topics/logging/
+
+
+
 
