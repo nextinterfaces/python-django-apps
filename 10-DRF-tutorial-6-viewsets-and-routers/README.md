@@ -14,7 +14,7 @@
     $ delete migrations
     $ python3 -m venv env_dev           # ! Important to set python3 env
     $ source env_dev/bin/activate
-    $ pip install requirements.txt
+    $ pip install -r requirements.txt
 
     $ python manage.py makemigrations snippets
     $ python manage.py migrate
