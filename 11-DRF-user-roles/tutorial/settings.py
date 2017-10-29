@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'le=_1h9(5_a6*jt@a_d!_bd2ce=xl)2kvn98sx71mrwh)ix7lh'
+SECRET_KEY = ')jh@ur%u^-+1-4cou_-*##v2=dk3w7zpv8d#)a&v^7!1=lezda'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,14 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'rest_framework_swagger',
     'snippets.apps.SnippetsConfig',
 ]
-
-REST_FRAMEWORK = {
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    'PAGE_SIZE': 3
-}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

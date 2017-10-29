@@ -1,0 +1,43 @@
+
+
+
+
+Basic Data Tables
+=====
+Users
+Permissions
+Roles
+ 
+User has one to many Permissions
+User has one Role
+Roles have one to many Permissions
+ 
+ 
+Users
+	id
+	first_name
+	last_name
+	email_address
+	created_at
+	role_id
+
+Permissions
+	id
+	name
+	code (or some readable unique identifier like a snake cased version of the name that can be used when decorating actions to check for proper permissions instead of decorating with numeric IDs)
+	description
+
+Roles
+	id
+	name
+	description
+
+
+
+
+
+https://computerlab.io/2016/08/17/django-rest-framework-roles/
+ACLs https://en.wikipedia.org/wiki/Access_control_list
+
+https://github.com/vintasoftware/django-role-permissions/blob/master/setup.py
+
