@@ -22,3 +22,11 @@ class Snippet(models.Model):
 class Role(models.Model):
     name = models.CharField(max_length=70)
     description = models.CharField(max_length=254)
+
+
+class User(models.Model):
+    role = models.ForeignKey(Role, null=True)
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=30)
+    email_address = models.CharField(max_length=254)
+    created_at = models.DateTimeField(auto_now_add=True)

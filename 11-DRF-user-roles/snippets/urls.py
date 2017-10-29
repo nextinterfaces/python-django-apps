@@ -7,6 +7,8 @@ urlpatterns = [
     url(r'^snippets/(?P<pk>[0-9]+)$', views.snippet_detail),
     url(r'^roles/$', views.RoleList.as_view()),
     url(r'^roles/(?P<pk>[0-9]+)/$', views.RoleDetail.as_view()),
+    url(r'^users/$', views.UserList.as_view()),
+    url(r'^users/(?P<pk>[0-9]+)/$', views.UserDetail.as_view()),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
