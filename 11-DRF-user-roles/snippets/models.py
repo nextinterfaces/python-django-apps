@@ -17,3 +17,8 @@ class Snippet(models.Model):
 
     class Meta:
         ordering = ('created',)
+
+
+class Role(models.Model):
+    name = models.CharField(max_length=70)
+    description = models.CharField(max_length=254)
