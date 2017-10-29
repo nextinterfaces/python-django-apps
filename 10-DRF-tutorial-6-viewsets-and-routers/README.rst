@@ -1,13 +1,18 @@
 
-## MySQL setup
+MySQL setup
+-----------
 
     - http://www.marinamele.com/taskbuster-django-tutorial/install-and-configure-mysql-for-django
 
-## Django RESTFramework tutorials
+Django RESTFramework tutorials
+------------------------------
 
     - http://www.django-rest-framework.org/tutorial/4-authentication-and-permissions/
 
-## Django tutorials
+Django tutorials
+----------------
+
+.. code:: bash
 
     $ /usr/local/bin/mysql.server start
     $ truncate/delete database or tables
