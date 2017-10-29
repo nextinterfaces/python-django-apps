@@ -9,7 +9,7 @@ Django RESTFramework tutorials
 
     - http://www.django-rest-framework.org/tutorial/4-authentication-and-permissions/
 
-Django tutorials
+Setup
 ----------------
 
 .. code:: bash
@@ -27,6 +27,12 @@ Django tutorials
     --> admin:canadacanada
 
     $ python manage.py runserver 0.0.0.0:8000
+
+
+Invoke API
+~~~~~~~~~~~~~~
+
+.. code:: bash
 
     $ http http://127.0.0.1:8000/snippets/
     $ http http://127.0.0.1:8000/snippets/ Accept:application/json  # Request JSON
