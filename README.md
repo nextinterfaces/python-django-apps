@@ -36,6 +36,11 @@ Django Logging
 
     - https://docs.djangoproject.com/en/1.11/topics/logging/
 
+Django Request Logging
+-------
+
+    - https://github.com/Rhumbix/django-request-logging
+
 
 
 

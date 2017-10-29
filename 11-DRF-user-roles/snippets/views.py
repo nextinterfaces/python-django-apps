@@ -7,19 +7,18 @@ from snippets.models import Role, User
 from snippets.serializers import RoleSerializer, UserSerializer
 from rest_framework import generics
 import logging
+
 log = logging.getLogger("MYAPP")
+
 
 def print_sql(queryset):
     print (queryset.query.get_compiler('default').as_sql())
+
 
 class RoleList(generics.ListCreateAPIView):
     queryset = Role.objects.all()
     serializer_class = RoleSerializer
     print_sql(queryset)
-    log.debug("--> DEBUG Hey there it works!!")
-    log.info("--> INFO Hey there it works!!")
-    log.warn("--> WARN Hey there it works!!")
-    log.error("--> ERROR Hey there it works!!")
 
 
 class RoleDetail(generics.RetrieveUpdateDestroyAPIView):

@@ -24,15 +24,21 @@ SECRET_KEY = ')jh@ur%u^-+1-4cou_-*##v2=dk3w7zpv8d#)a&v^7!1=lezda'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
+# INTERNAL_IPS defines the ip list where Django Debug Toolbar will run
 INTERNAL_IPS = ('127.0.0.1',)
+
+# REQUEST_LOGGING_DISABLE_COLORIZE defines colorizing of the HTTP requests log in console (False) disables colors
+# REQUEST_LOGGING_DISABLE_COLORIZE = False
 
 LOGGING = {
     'version': 1,
-    'disable_existing_loggers': True,
+    'disable_existing_loggers': False,
     'formatters': {
         'standard': {
-            'format' : "%(levelname)s [%(name)s:%(lineno)s] %(message)s",
+            'format' : "%(levelname)s [%(name)s:%(lineno)s]\t%(message)s",
             'datefmt' : "%d/%b/%Y %H:%M:%S"
+            # TODO enable this bellow for PROD
             # 'format' : "[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s",
             # 'datefmt' : "%d/%b/%Y %H:%M:%S"
         },
@@ -67,6 +73,11 @@ LOGGING = {
             'handlers': ['console', 'logfile'],
             'level': 'DEBUG',
         },
+        'django.request': {
+            'handlers': ['console'],
+            'level': 'DEBUG',  # change debug level as appropiate
+            'propagate': False,
+        },
     }
 }
 
@@ -96,6 +107,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'request_logging.middleware.LoggingMiddleware',
 ]
 
 ROOT_URLCONF = 'tutorial.urls'
