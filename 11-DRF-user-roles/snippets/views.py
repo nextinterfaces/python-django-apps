@@ -5,49 +5,59 @@ from snippets.models import Snippet
 from snippets.serializers import SnippetSerializer
 from snippets.models import Role
 from snippets.serializers import RoleSerializer
+from rest_framework import generics
 
 
-@api_view(['GET', 'POST'])
-def role_list(request, format=None):
-    """
-    List all code roles, or create a new role.
-    """
-    if request.method == 'GET':
-        roles = Role.objects.all()
-        serializer = RoleSerializer(roles, many=True)
-        return Response(serializer.data)
+class RoleList(generics.ListCreateAPIView):
+    queryset = Role.objects.all()
+    serializer_class = RoleSerializer
 
-    elif request.method == 'POST':
-        serializer = RoleSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-@api_view(['GET', 'PUT', 'DELETE'])
-def role_detail(request, pk, format=None):
-    """
-    Retrieve, update or delete a code role.
-    """
-    try:
-        role = Role.objects.get(pk=pk)
-    except Role.DoesNotExist:
-        return Response(status=status.HTTP_404_NOT_FOUND)
+class RoleDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Role.objects.all()
+    serializer_class = RoleSerializer
 
-    if request.method == 'GET':
-        serializer = RoleSerializer(role)
-        return Response(serializer.data)
-
-    elif request.method == 'PUT':
-        serializer = RoleSerializer(role, data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-    elif request.method == 'DELETE':
-        role.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+# @api_view(['GET', 'POST'])
+# def role_list(request, format=None):
+#     """
+#     List all code roles, or create a new role.
+#     """
+#     if request.method == 'GET':
+#         roles = Role.objects.all()
+#         serializer = RoleSerializer(roles, many=True)
+#         return Response(serializer.data)
+#
+#     elif request.method == 'POST':
+#         serializer = RoleSerializer(data=request.data)
+#         if serializer.is_valid():
+#             serializer.save()
+#             return Response(serializer.data, status=status.HTTP_201_CREATED)
+#         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+#
+# @api_view(['GET', 'PUT', 'DELETE'])
+# def role_detail(request, pk, format=None):
+#     """
+#     Retrieve, update or delete a code role.
+#     """
+#     try:
+#         role = Role.objects.get(pk=pk)
+#     except Role.DoesNotExist:
+#         return Response(status=status.HTTP_404_NOT_FOUND)
+#
+#     if request.method == 'GET':
+#         serializer = RoleSerializer(role)
+#         return Response(serializer.data)
+#
+#     elif request.method == 'PUT':
+#         serializer = RoleSerializer(role, data=request.data)
+#         if serializer.is_valid():
+#             serializer.save()
+#             return Response(serializer.data)
+#         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+#
+#     elif request.method == 'DELETE':
+#         role.delete()
+#         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
 
