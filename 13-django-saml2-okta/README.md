@@ -8,7 +8,6 @@ Using sql lite database
     $ source .env/bin/activate
     $ pip install -r requirements.txt
 
-
     django-admin startproject mysite
 
     cd mysite
