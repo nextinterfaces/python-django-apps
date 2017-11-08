@@ -1,6 +1,7 @@
 from django.db import models
 from pygments.lexers import get_all_lexers
 from pygments.styles import get_all_styles
+from django.http import Http404
 
 LEXERS = [item for item in get_all_lexers() if item[1]]
 LANGUAGE_CHOICES = sorted([(item[1][0], item[0]) for item in LEXERS])
@@ -25,8 +26,12 @@ class Role(models.Model):
 
 
 class User(models.Model):
-    role = models.ForeignKey(Role, null=True)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
-    email_address = models.CharField(max_length=254)
+    email = models.EmailField(max_length=254)
     created_at = models.DateTimeField(auto_now_add=True)
+    role = models.ForeignKey(Role, related_name='snippets', null=True)
+
+    # def save(self, *args, **kwargs):
+    #     print ('---> User----- SAVE: ', self, args, kwargs)
+    #     super(User, self).save(*args, **kwargs)

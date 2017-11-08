@@ -1,20 +1,34 @@
-from rest_framework import serializers
+from rest_framework.serializers import ModelSerializer
 from snippets.models import Snippet, Role, User, LANGUAGE_CHOICES, STYLE_CHOICES
 
+class UserSerializer(ModelSerializer):
+    # email = serializers.EmailField()
+    # content = serializers.CharField(max_length=200)
+    # created = serializers.DateTimeField()
+    # role_id = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
 
-class UserSerializer(serializers.ModelSerializer):
+    def create(self, validated_data):
+        print ('----> UserSerializer.created', self, '\n', self.initial_data,
+               '\n', validated_data)
+        role_id = self.initial_data['role_id'] # TODO better way ?
+        print ('---- 555 ----> ', role_id);
+        # role = Role.objects.get(id=role_id)
+        role = Role.objects.get(pk=role_id)
+        return User.objects.create(role=role, **validated_data)
+
     class Meta:
         model = User
-        fields = ('id', 'role_id', 'first_name', 'last_name', 'email_address', 'created_at')
+        # model.role = Role
+        fields = ('id', 'role_id', 'first_name', 'last_name', 'email', 'created_at')
 
 
-class RoleSerializer(serializers.ModelSerializer):
+class RoleSerializer(ModelSerializer):
     class Meta:
         model = Role
         fields = ('id', 'name', 'description')
 
 
-class SnippetSerializer(serializers.ModelSerializer):
+class SnippetSerializer(ModelSerializer):
     class Meta:
         model = Snippet
         fields = ('id', 'title', 'code', 'linenos', 'language', 'style')
