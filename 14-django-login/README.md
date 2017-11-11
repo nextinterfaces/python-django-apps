@@ -23,6 +23,6 @@ Example created for the blog post [How to Use Django's Built-in Login System][bl
 
     python manage.py runserver 0.0.0.0:8000
 
-### 5. And open 127.0.0.1:8000/login in your web browser.
+### 5. And open `http://127.0.0.1:8000/login` in your web browser.
 
 From: http://simpleisbetterthancomplex.com/tutorial/2016/06/27/how-to-use-djangos-built-in-login-system.html
