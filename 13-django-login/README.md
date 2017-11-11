@@ -1,7 +1,6 @@
 ## What's this repository about?
 
-Example created for the blog post [How to Use Django's Built-in Login System][blog-post] at [simpleisbetterthancomplex.com][blog].
-
+Example login system build on django
 
 ## How do I run this project locally?
 
