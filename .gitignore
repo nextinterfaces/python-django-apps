@@ -15,10 +15,14 @@ _junk
 package-lock.json*
 env_*/
 env
+venv
+.venv
+.env
 migrations/
 __pycache__
 *.pyc
 .env
 db.sqlite3
+
 
 
