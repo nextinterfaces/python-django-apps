@@ -16,6 +16,7 @@ package-lock.json*
 env_*/
 env
 venv
+.tmp
 .venv
 .env
 migrations/
