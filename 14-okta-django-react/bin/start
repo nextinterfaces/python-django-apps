@@ -4,5 +4,6 @@ printf "\n\n------------------------\n\n\tStarting Django\n\n-------------------
 
 (
   source .tmp/venv/bin/activate && \
+  npm run prestart && \
   python3 lib/manage.py runserver 3000
 )
