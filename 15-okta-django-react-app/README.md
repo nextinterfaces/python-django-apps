@@ -20,7 +20,7 @@ To run with mock-okta:
 
     Modify .samples.config.json
 
-    $ npm run mock-okta
+    $ bin/start-mock
 
 To run against okta.com
 
@@ -31,3 +31,8 @@ To run against okta.com
     2. Modify .samples.config.json with the app configurations
 
     After which `$ bin/start` Django
+
+
+To build client:
+
+    $ bin/start-client

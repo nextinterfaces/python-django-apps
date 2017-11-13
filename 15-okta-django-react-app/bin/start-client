@@ -3,6 +3,6 @@
 printf "\n\n------------------------\n\n\tStarting Django\n\n------------------------\n\n"
 
 (
-  source .tmp/venv/bin/activate && \
-  python3 lib/manage.py runserver 3000
+  cd client && \
+  DIST_OUT=../dist npm run build
 )

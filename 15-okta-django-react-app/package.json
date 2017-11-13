@@ -13,7 +13,6 @@
     "mock-okta": "node tools/mock-okta",
     "mock-okta:debug": "DEBUG=mock-okta npm run mock-okta",
     "wrap": "node tools/wrap-dependencies",
-    "prestart": "build-frontend",
     "start": "python3 lib/manage.py runserver 3000",
     "test:e2e": "webdriver-manager update && protractor test/e2e/conf.js",
     "test:mock-okta": "node test/app-server/lib/test-mock-okta",
@@ -35,7 +34,6 @@
     "yakbak": "2.5.0"
   },
   "dependencies": {
-    "@okta/samples-js-react": "^1.4.0",
     "chai": "3.5.0",
     "chai-files": "1.4.0",
     "chai-fs": "1.0",
