@@ -1,0 +1,10 @@
+#!/bin/bash
+
+printf "\n\n------------------------\n\n\tRunning migrations from '$(pwd)'\n\n------------------------\n\n"
+
+(
+  source .tmp/venv/bin/activate && \
+  python lib/manage.py makemigrations stateful && \
+  python lib/manage.py migrate
+  deactivate
+)
