@@ -1,6 +1,6 @@
 {
   "name": "@nextinterfaces/okta-django",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "scripts": {
     "mock-okta": "node tools/mock-okta",
     "mock-okta:debug": "DEBUG=mock-okta npm run mock-okta",

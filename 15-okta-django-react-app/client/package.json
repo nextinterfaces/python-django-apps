@@ -1,32 +1,10 @@
 {
   "name": "@nextinterfaces/okta-react",
-  "version": "1.4.0",
+  "version": "0.0.1",
   "scripts": {
     "build": "webpack --config webpack.config.js"
   },
-  "devDependencies": {
-    "chalk": "1.1.3",
-    "cli-table2": "0.2.0",
-    "connect": "3.5.0",
-    "consolidate": "0.14.1",
-    "cookie-parser": "1.4.3",
-    "debug": "2.1.3",
-    "diff": "3.0.1",
-    "eslint": "3.9.1",
-    "eslint-config-airbnb": "12.0.0",
-    "eslint-plugin-import": "1.16.0",
-    "eslint-plugin-jsx-a11y": "2.2.3",
-    "eslint-plugin-react": "6.5.0",
-    "jws": "3.1.4",
-    "minimist": "1.2.0",
-    "mustache": "2.2.1",
-    "pem-jwk": "1.5.1",
-    "protractor": "4.0.4",
-    "request": "2.73.0",
-    "wait-on": "2.0.2",
-    "webpack-dev-server": "1.16.2",
-    "yakbak": "2.5.0"
-  },
+  "devDependencies": {},
   "dependencies": {
     "@okta/okta-auth-js": "1.6.0",
     "@okta/okta-signin-widget": "1.9.0",
@@ -36,7 +14,6 @@
     "babel-preset-es2015": "6.18.0",
     "babel-preset-react": "6.16.0",
     "copy-webpack-plugin": "4.0.0",
-    "handlebars-loader": "1.4.0",
     "highlight.js": "9.9.0",
     "react": "15.4.1",
     "react-dom": "15.4.1",
