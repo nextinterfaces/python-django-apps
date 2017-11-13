@@ -16,7 +16,7 @@ To start Django:
     $ bin/start
 
 
-To run with mock:
+To run with mock-okta:
 
     Modify .samples.config.json
 
