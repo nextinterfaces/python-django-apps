@@ -1,10 +1,24 @@
 {
   "oktaSample": {
     "oidc": {
+      "oktaUrl": "https://dev-977591.oktapreview.com",
+      "issuer": "https://dev-977591.oktapreview.com/oauth2/default",
+      "clientId": "0oacuh2gb327BEAqF0h7",
+      "clientSecret": "ZNYTaIsShJH2y6u74-m2JfhYtGN9_6jiMlheWjBO",
+      "redirectUri": "http://localhost:3000/authorization-code/callback"
+    },
+    "______oidc_MOCK": {
       "oktaUrl": "http://127.0.0.1:7777",
       "issuer": "http://127.0.0.1:7777/oauth2/default",
       "clientId": "0oaom8GeLzZeX7oYZ0g3",
       "clientSecret": "XIZPoGtuyhu0V8MsQzGOsOSn6oSff3vO8Vp2nmLY",
+      "redirectUri": "http://localhost:3000/authorization-code/callback"
+    },
+    "______oidc-OKTA.com": {
+      "oktaUrl": "https://dev-977591.oktapreview.com",
+      "issuer": "https://dev-977591.oktapreview.com/oauth2/default",
+      "clientId": "0oacuh2gb327BEAqF0h7",
+      "clientSecret": "ZNYTaIsShJH2y6u74-m2JfhYtGN9_6jiMlheWjBO",
       "redirectUri": "http://localhost:3000/authorization-code/callback"
     },
     "server": {
