@@ -1,0 +1,10 @@
+{
+  "@okta/generator-samples": {
+    "type": "end-to-end",
+    "environment": "python",
+    "framework": "django",
+    "name": "samples-python-django",
+    "version": "1.16.0",
+    "parentType": "sample"
+  }
+}

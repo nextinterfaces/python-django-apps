@@ -1,0 +1,14 @@
+#!/bin/bash
+
+ENV=dev
+
+printf "\n\n------------------------\n\n\tInstalling '$ENV' requirements from '$(pwd)'\n\n------------------------\n\n"
+
+(
+  mkdir -p .tmp/logs
+  pip install virtualenv && \
+  virtualenv -p python3.6 .tmp/venv && \
+  source .tmp/venv/bin/activate && \
+  pip install -r requirements.txt
+  deactivate
+)
