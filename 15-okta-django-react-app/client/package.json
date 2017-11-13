@@ -1,19 +1,9 @@
 {
-  "name": "@okta/samples-js-react",
+  "name": "@nextinterfaces/okta-react",
   "version": "1.4.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.config.js"
   },
-  "author": "",
-  "license": "Apache-2.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/okta/samples-js-react.git"
-  },
-  "bugs": "https://github.com/okta/samples-js-react/issues",
-  "homepage": "https://github.com/okta/samples-js-react",
   "devDependencies": {
     "chalk": "1.1.3",
     "cli-table2": "0.2.0",
@@ -36,9 +26,6 @@
     "wait-on": "2.0.2",
     "webpack-dev-server": "1.16.2",
     "yakbak": "2.5.0"
-  },
-  "bin": {
-    "build-frontend": "./scripts/build-frontend.js"
   },
   "dependencies": {
     "@okta/okta-auth-js": "1.6.0",

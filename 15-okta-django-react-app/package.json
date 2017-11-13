@@ -1,13 +1,6 @@
 {
-  "name": "@okta/samples-python-django",
+  "name": "@nextinterfaces/okta-django",
   "version": "1.0.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/okta/samples-python-django.git"
-  },
-  "bugs": "https://github.com/okta/samples-python-django/issues",
-  "license": "Apache-2.0",
-  "homepage": "https://github.com/okta/samples-python-django",
   "scripts": {
     "mock-okta": "node tools/mock-okta",
     "mock-okta:debug": "DEBUG=mock-okta npm run mock-okta",
