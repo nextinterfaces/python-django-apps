@@ -57,7 +57,7 @@ MIDDLEWARE_CLASSES = [
 
 ROOT_URLCONF = 'samples.urls'
 
-TEMPLATES_DIR = BASE_DIR[:-3] + 'tools/templates'
+TEMPLATES_DIR = BASE_DIR[:-3] + 'lib/templates'
 STATIC_ROOT = os.path.join(BASE_DIR[:-3], "dist/")
 
 TEMPLATES = [
