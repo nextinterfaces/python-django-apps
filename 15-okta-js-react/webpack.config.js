@@ -43,8 +43,8 @@ module.exports = {
       { from: require.resolve('highlight.js/styles/tomorrow.css'), to: 'css/hljs' },
       { from: semanticUiDir, to: 'css/semantic-ui' },
       { from: `${oswDir}/dist/css`, to: 'css' },
-      { from: `${oswDir}/dist/font`, to: 'font' },
-      { from: `${oswDir}/dist/img`, to: 'img' },
+      // { from: `${oswDir}/dist/font`, to: 'font' },
+      // { from: `${oswDir}/dist/img`, to: 'img' },
     ]),
     new webpack.ProvidePlugin({
       jQuery: 'jquery',
