@@ -1,0 +1,4 @@
+Django
+django-request-logging
+pysaml2
+requests
