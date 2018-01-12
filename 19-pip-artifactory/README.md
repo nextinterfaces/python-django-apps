@@ -29,16 +29,19 @@ To deploy a python egg to Artifactory, after changing the .pypirc file, run the 
 where `local` is the index server you defined in `~/.pypirc`.
 
 ### Configure pip to resolve from Artifactory local
-Create config file for pip that will resolve the artifactory server:
+Create config file for pip that will resolve the artifactory server from Pypi virtual repository (aggregating `pypi-local` and `pypi-remote`):
 	
 	$ vi ~/.pip/pip.conf
 	
 	[global]
-	index-url = http://localhost:8081/artifactory/api/pypi/pypi-local/simple
+	index-url = http://localhost:8081/artifactory/api/pypi/pypi/simple
 	
 
 ### And pip install
 
 	$ pip install pip_next_example==0.1
+	
+### Tutorial
+[Setting up Artifactory 5 as a PyPI repository in under one minute](https://www.youtube.com/watch?v=WSUjbnfWxvg)
 
 

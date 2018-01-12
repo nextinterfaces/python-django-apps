@@ -26,7 +26,7 @@ Start the server:
 
     $ pypi-server -p 8082 ~/packages
     
-    $ curl http://192.168.10.103:8082/simple/
+    $ curl http://localhost:8082/simple/ # to test
 
 Install the package:
 
@@ -34,16 +34,13 @@ Install the package:
 
 Alternatively using pip.conf
 
-    $ mkdir ~/.pip && cd ~/.pip
-    $ touch pip.conf && vi pip.conf
-
-Paste this into pip.conf:
-
+    $ vi ~/.pip/pip.conf
+    
     [global]
     extra-index-url = http://localhost:8082/
     trusted-host = localhost
 
-And install again:
+And install directly:
 
     $ pip install pip_next_example
     
@@ -58,7 +55,7 @@ Test the installation:
 
 Based on following tutorials:
 
-- https://linode.com/docs/applications/project-management/how-to-create-a-private-python-package-repository/
-- http://peterdowns.com/posts/first-time-with-pypi.html
+- [https://linode.com/docs/applications/project-management/how-to-create-a-private-python-package-repository/]()
+- [http://peterdowns.com/posts/first-time-with-pypi.html]()
 
 
