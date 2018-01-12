@@ -25,6 +25,8 @@ Download the package through pip in the newly created virtual environment:
 Start the server:
 
     $ pypi-server -p 8082 ~/packages
+    
+    $ curl http://192.168.10.103:8082/simple/
 
 Install the package:
 
